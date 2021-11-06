@@ -1,0 +1,529 @@
+
+
+@font-face {
+  font-family: "cos";
+  src: url("gelasio-medium.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  font-family: "cos";
+ 
+}
+
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+
+/*-------------------------------------------*/
+/* -------------ARTICLE SECTION--------------*/
+/*-------------------------------------------*/
+
+#section-article {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+  width: 100%;
+  z-index: 1;
+}
+
+#section-article img {
+  width: 500px;
+  height: 400px;
+  max-width: 100%;
+  height: auto;
+}
+
+.article {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+
+#left-article {
+
+}
+
+#right-article {
+
+}
+
+#center-article {
+
+}
+  
+  #left-article::-webkit-scrollbar,
+  #right-article::-webkit-scrollbar, 
+  #center-article::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+#open_menu:hover  {
+  color: lightsteelblue;
+}
+
+#open_menu  {
+  cursor: pointer;
+  color: red;
+}
+
+
+
+
+/*-------------------------------------------*/
+/* ---------Navbar in the UPPER SIDE---------*/
+/*-------------------------------------------*/
+
+
+#Navbar {
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.navbar-element {
+  font-size: large;
+}
+
+.text-navbar {
+  font-size: xx-large;
+}
+
+
+#change_page {
+  cursor: pointer;
+}
+
+#metadata{
+  margin: 10px;
+  pointer-events: none;
+  cursor: pointer;
+  color: red;
+}
+
+#metadata:hover  {
+  color: lightsteelblue;
+}
+
+.change_time {
+  pointer-events: pointer;
+  cursor: pointer;
+}
+
+.change_time:hover {
+  color: lightsteelblue;
+}
+
+
+#issue{
+  font-size: 28px;
+}
+
+/*-------------------------------------------*/
+/* ---------Navbar in the DOWN SIDE----------*/
+/*-------------------------------------------*/
+
+#Navbar-issue {
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 95%;
+  z-index: 3;
+}
+
+#section-open-button {
+  height: 10%;
+  width: 100%;
+  background-color: white;
+  display:flex;
+  flex-direction: column;       /*--BUTTON PART--*/         
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: large;
+}
+
+
+#section-open-button:hover {
+  color: lightsteelblue;
+}
+
+
+#section-images_issue {
+  display: flex;
+  flex-wrap: wrap;      /*--IMAGE ISSUES PART--*/    
+  width: 100%;
+  height: 90%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.images_issue{
+  flex: 0 1 25%;
+  cursor: pointer;
+}
+
+.images_issue img{
+  width: 100%;
+}
+
+
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+
+
+/*-------------------------------------------*/
+/* -------------METADATA SECTION-------------*/
+/*-------------------------------------------*/
+
+#section-metadata {
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+
+.transition {
+  transition: 0.5s;
+}
+
+/* -------------HEAD-------------*/
+
+#head-metadata {
+  height: 40px;
+  display: flex;
+  justify-content: end;
+ 
+}
+
+#close-button-metadata {
+  cursor: pointer;
+  margin-right: 10px;
+  justify-self: center;
+  color:red;
+}
+
+#close-button-metadata:hover {
+  color: lightsteelblue;
+}
+
+/* -------------CENTER-------------*/
+
+#section-metadata img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#center-metadata {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+
+#center-metadata::-webkit-scrollbar {
+  display: none;
+}
+
+#metadata-left-article, 
+#metadata-center-article, 
+#metadata-right-article {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-size:large;
+  overflow-y: scroll;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#Named_entites {
+  line-height: 40px;
+}
+
+#topics {
+  line-height: 40px;
+}
+
+#topics button, #topics label, #topics input {
+  margin: 5px;
+}
+
+#Named_entites button, #Named_entites label, #Named_entites input {
+  margin: 5px;
+}
+
+
+#topics button,  #Named_entites button{
+  border-radius: 5px;
+  background-color: white;
+  width: fit-content;
+  font-size: medium;
+}
+
+#topics input, #Named_entites input {
+  width: 30px;
+}
+
+.general_info {
+  min-height: 15em;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+
+
+
+
+
+#metadata-center-article::-webkit-scrollbar,
+#metadata-right-article::-webkit-scrollbar, 
+#metadata-left-article::-webkit-scrollbar {
+  display: none;
+}
+
+/*-------------------------------------------*/
+/* -------------OTHER SECTION----------------*/
+/*-------------------------------------------*/
+
+#hidden-part {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 20;
+  flex-direction: column;
+  background-color: rgba(211, 210, 210, 0.95);
+}
+
+#close_menu:hover  {
+  color: lightsteelblue;
+}
+
+#close_menu  {
+  cursor: pointer;
+  color: red;
+}
+
+
+#blocks-navbar {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-around;
+
+}
+
+.blocks-select {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: xx-large;
+
+}
+
+hr {
+  color: black;
+}
+
+.blocks-select hr {
+  width: 80%;
+}
+
+.click_position {
+  cursor: pointer;
+}
+
+
+.click_position:hover  {
+  color: lightsteelblue;
+}
+
+
+#metadata-left-article h1{
+  font-size: x-large;
+  color: dodgerblue;
+}
+
+#metadata-right-article h1{
+  font-size: x-large;
+  color: tomato;
+}
+
+#metadata-center-article h1{
+  font-size: x-large;
+  color:olivedrab;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  #section-article {
+    flex-direction: column;
+  }
+
+  #left-article {
+    border-bottom: 5px dashed  black;
+  }
+
+  #center-article {
+    border-bottom: 5px dashed black;
+  }
+
+  #center-metadata {
+    flex-direction: column;
+  }
+
+  #metadata-left-article {
+    border-top: 5px dashed  black;
+    border-bottom: 5px dashed  black;
+  }
+
+  #metadata-center-article {
+    border-bottom: 5px dashed black;
+  }
+
+  
+}
+
+@media only screen and (max-width: 740px) {
+
+
+  .blocks-select {
+    font-size: large;
+
+}
+
+  .b {
+  font-size: large;
+}
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------*/
+/* -------------2030 STYLE NORMAL-------------*/
+/*-------------------------------------------*/
+
+
+
+
+.button_2030 {
+  font-size: x-large;
+  padding: 10px;
+  border:thin 2px;
+  border-radius: 20px;
+  margin:10px;
+}
+
+.dev_tools {
+  background-color: white;
+  border:thin 2px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+.dev_tools_center {
+  background-color: white;
+  border:thin 2px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+.dev_tools_center iframe {
+  width: 100%;
+  height: 540px;
+}
+
+
+.tool {
+ padding: 30px;
+
+}
+
+.dev_tools iframe {
+  width: 100%;
+  height: 360px;
+}
+
+
+.drop-nav > ul {
+  display: none;
+}
+
+.drop-nav.active > ul {
+  display: block;
+}
