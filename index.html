@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
-    <link rel="stylesheet" href="style/home_style/index.css">
+    <link rel="stylesheet" href="style/home_style/home_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
@@ -12,18 +12,17 @@
     <title>Home</title>
 </head>
 <body>
-    <div id="hidden-part">
+    <div id="Navbar">
 
         <div class="top">
-            <div id="close_menu">close</div>
+            <div id="close_menu">MENU</div>
             <div>CONTATTI</div>
         </div>
 
 
-        <div id="blocks-navbar">
+        <div id="blocks-navbar" class="hidden-part">
             
-
-            <div class="blocks-select">
+            <div class="blocks-select" id="time">
                 <h1><strong>PROGETTI</strong></h1>
                 <hr>
                 <div class="link">TUTTI I PROGETTI</div>
@@ -45,19 +44,43 @@
         </div>
     </div>
 
- 
-    <div id="Navbar">
-        <div class="top">
-            <div id="open_menu">MENU</div>
-            <div>CONTATTI</div>
-        </div>
-    </div>
-
-
+    <div id="background-image">
+        <div id="image-container"></div>
+    </div>  
 
     <div id="main">
 
+        <div class="row grey">
 
+            <div class="image">
+                <img src="Escooh_Architettura-organica.jpg">
+            </div>
+
+            <div class="text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Vel dolorem doloremque illum, 
+                ad incidunt enim distinctio itaque suscipit a, 
+                omnis exercitationem consectetur, atque facere voluptas nostrum 
+                perspiciatis minus cupiditate hic.
+                </p>
+        </div>
+        </div>
+
+        <div class="row green">
+
+            <div class="text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Vel dolorem doloremque illum, 
+                ad incidunt enim distinctio itaque suscipit a, 
+                omnis exercitationem consectetur, atque facere voluptas nostrum 
+                perspiciatis minus cupiditate hic.
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="Architettura-Moderna-a-Roma.jpg">
+            </div>
+        </div>
 
     </div>
 
