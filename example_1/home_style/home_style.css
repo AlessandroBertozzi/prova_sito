@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
   }
 
   .blocks-select {
-        flex: 0 1 30rem;
+        flex: 0 1 25rem;
         padding: 2%;
         width: 20%;
     
@@ -68,54 +68,86 @@ body::-webkit-scrollbar {
 
   #image-container {
       flex: 1 1 1080px;
-      background: url(../../0lajfsna-xq-e1591357667828.jpg) no-repeat;
+      background: url(../0lajfsna-xq-e1591357667828.jpg) no-repeat;
       background-size: cover;
       background-position: center;
       height: 100%;
   }
 
 
-  #main { 
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-  }
+#main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
 
-  .row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 50px;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      font-size: x-large;
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
 
-  }
+.text {
+    width: 80%;
+    
+}
 
-  .text {
-      flex: 0 1 450px;
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      line-height: 2.5rem;
-      margin: 5px;
-      
-  }
+.team {
+    height: fit-content;
+}
+.image {
+    padding: 10px;
+}
+.image img {
+    width: 720px;
+    height: 100%;
+    border-radius: 2px;
+}
 
-  .image {
-      flex: 1 1 720px;
-      margin: 2px;
+.text-image {
+    width: 25%;
+    align-self: center;
 
-  }
+}
 
-  #main img {
-      width: 100%;
-      border-radius: 5px;
-  }
-
+.footer {
+ margin-bottom: 0;
+ margin-top: 0;
+ height: 20vh;
+ background-color: rgb(68, 62, 62, 0.2);
+}
 
 .green {
     background-color: rgb(197,223,11);
-    flex-wrap: wrap-reverse;
 }
 
+.team {
 
+    display: flex;
+    flex-direction: row;
+}
+
+.image-team {
+    width: 180px;
+
+    
+}
+
+.image-team img {
+    width: 100%;
+
+}
+
+.member {
+    padding: 20px;
+    width: 450px;
+    box-shadow: 0 0 5px 0 #888888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
