@@ -12,6 +12,7 @@ function open_menu() {
     else {
       document.getElementById("blocks-navbar").style.display = "none";
       document.getElementById("Navbar").style.backgroundColor = "transparent";
+      document.getElementById("Navbar").style.backgroundColor = "rgb(128, 128, 128, 0.8)";
   }}
 
 
