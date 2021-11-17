@@ -84,7 +84,7 @@ body::-webkit-scrollbar {
 .row {
     display: flex;
     flex-direction: row;
-    height: 50vh;
+    height: 75vh;
     justify-content: space-evenly;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -103,8 +103,8 @@ body::-webkit-scrollbar {
     padding: 10px;
 }
 .image img {
-    width: 720px;
-    height: 100%;
+
+
     border-radius: 2px;
 }
 
