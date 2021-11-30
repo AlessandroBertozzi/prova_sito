@@ -60,3 +60,19 @@ function open_menu() {
   
       })
 
+      $('#main').on('ontouchmove', function() {
+        var h = window.innerHeight;
+        var intElemScrollTop = document.getElementById('main').scrollTop;
+        var intvalue = Math.round( intElemScrollTop );
+  
+        var ciao = intvalue / h;
+  
+        number_slide = Math.round(ciao + 1);
+        
+        console.log(number_slide);
+  
+    
+        })
+
+
+
