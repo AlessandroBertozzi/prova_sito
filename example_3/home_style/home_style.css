@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 
 
 
@@ -6,7 +9,7 @@ body{
     margin: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 100vw;
     box-sizing: border-box;
 
@@ -19,7 +22,7 @@ body::-webkit-scrollbar {
 
 
 #Navbar {
-    color: white;
+    color: black;
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -27,8 +30,10 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: space-between;
     font-size: large;
+    font-style: bold;
     line-height: 2.5rem;
-    background-color: rgb(128, 128, 128, 0.9);
+    background-color: white;
+    font-weight: 700;
   }
   
 
@@ -36,17 +41,20 @@ body::-webkit-scrollbar {
     display: none;
     justify-content: flex-start;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(197,223,11);
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-.blocks-select {
-    flex: 0 1 25rem;
-    padding: 2%;
-    width: 20%;
+
+#blocks-navbar div {
+    padding: 20px;
+    margin-top: 5px;
 }
 
-.blocks-select h1 {
-    color: black;
-}
 
 .top {
     display: flex;
@@ -86,6 +94,34 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+#image-container-1 {
+  flex: 1 1 1080px;
+  background: url(https://media.architecturaldigest.com/photos/5d3f6c8084a5790008e99f37/master/w_3000,h_2123,c_limit/GettyImages-1143278588.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+
+#image-container-2 {
+  flex: 1 1 1080px;
+  background: url(../0lajfsna-xq-e1591357667828.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+
+#image-container-3 {
+  flex: 1 1 1080px;
+  background: url(https://media.architecturaldigest.com/photos/5d3f6c8084a5790008e99f37/master/w_3000,h_2123,c_limit/GettyImages-1143278588.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 #main {
@@ -176,4 +212,183 @@ img {
     
     }
 
+  }
+
+
+
+
+
+
+
+
+  
+  .social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -10px;
+  }
+  .social-buttons__button {
+    margin: 10px 5px 0;
+  }
+  
+  .social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: #fff;
+    text-align: center;
+  }
+  .social-button::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+  }
+  .social-button:focus, .social-button:hover {
+    color: #fff;
+  }
+  .social-button:focus::after, .social-button:hover::after {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-left: calc(-50% - 1px);
+  }
+  .social-button i,
+  .social-button svg {
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  .social-button i {
+    font-size: 28px;
+  }
+  .social-button svg {
+    height: 40%;
+    width: 40%;
+  }
+  .social-button--mail {
+    color: #0072c6;
+  }
+  .social-button--mail::after {
+    background: #0072c6;
+  }
+  .social-button--facebook {
+    color: #3b5999;
+  }
+  .social-button--facebook::after {
+    background: #3b5999;
+  }
+  .social-button--linkedin {
+    color: #0077b5;
+  }
+  .social-button--linkedin::after {
+    background: #0077b5;
+  }
+  .social-button--github {
+    color: #6e5494;
+  }
+  .social-button--github::after {
+    background: #6e5494;
+  }
+  .social-button--codepen {
+    color: #212121;
+  }
+  .social-button--codepen::after {
+    background: #212121;
+  }
+  .social-button--steam {
+    color: #7da10e;
+  }
+  .social-button--steam::after {
+    background: #7da10e;
+  }
+  .social-button--snapchat {
+    color: #eec900;
+  }
+  .social-button--snapchat::after {
+    background: #eec900;
+  }
+  .social-button--twitter {
+    color: #55acee;
+  }
+  .social-button--twitter::after {
+    background: #55acee;
+  }
+  .social-button--instagram {
+    color: #e4405f;
+  }
+  .social-button--instagram::after {
+    background: #e4405f;
+  }
+  .social-button--npmjs {
+    color: #c12127;
+  }
+  .social-button--npmjs::after {
+    background: #c12127;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .arrow{
+    z-index: 2000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transform: rotate(180deg)
+  }
+
+  .arrow span{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-bottom: 6px solid white;
+      border-right: 6px solid white;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: animate 2s infinite;
+  }
+  .arrow span:nth-child(2){
+      animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3){
+      animation-delay: -0.4s;
+  }
+  @keyframes animate {
+      0%{
+          opacity: 0;
+          transform: rotate(45deg) translate(-20px,-20px);
+      }
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+          transform: rotate(45deg) translate(20px,20px);
+      }
   }

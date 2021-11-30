@@ -5,14 +5,11 @@
 function open_menu() {
   if (document.getElementById("blocks-navbar").style.display === "none" || document.getElementById("blocks-navbar").style.display === "") {
       document.getElementById("blocks-navbar").style.display = "flex";
-      document.getElementById("Navbar").style.backgroundColor = "rgb(197,223,11)";
-      document.getElementById("open_menu").style.visibility = "hidden";
+      document.getElementById("Navbar").style.color = "black";
     }
 
     else {
       document.getElementById("blocks-navbar").style.display = "none";
-      document.getElementById("Navbar").style.backgroundColor = "transparent";
-      document.getElementById("Navbar").style.backgroundColor = "rgb(128, 128, 128, 0.8)";
   }}
 
 
@@ -23,21 +20,43 @@ function open_menu() {
   })
 
 
-/*----------------CHANGE_YEAR------------------*/
+  number_slide = 1;
+  $(".arrow" ).click(function() {
+    console.log(number_slide);
 
+    if (number_slide < 3) {
+      number_slide = number_slide + 1;
+    $("#background-image-" + number_slide)[0].scrollIntoView({
+      behavior: "smooth", // or "auto" or "instant"
+      block: "start" // or "end"
+  });
+}
+  else if (number_slide == 3) {
+    number_slide = 1;
 
-
-
-
-
-
-    $(document).on ("click", ".drop-nav", function(e) {
-      e.preventDefault()
-      // don't allow the event to fire horizontally or vertically up the tree
-      e.stopImmediatePropagation()
-      // switch the active class that you can use to display the child
-      $(this).toggleClass('active')
+    $("#background-image-" + number_slide)[0].scrollIntoView({
+      behavior: "smooth", // or "auto" or "instant"
+      block: "start" // or "end"
     })
+  }
+  });
 
 
+
+
+    
+    
+    $('#main').on('wheel', function() {
+      var h = window.innerHeight;
+      var intElemScrollTop = document.getElementById('main').scrollTop;
+      var intvalue = Math.round( intElemScrollTop );
+
+      var ciao = intvalue / h;
+
+      number_slide = Math.round(ciao + 1);
+      
+      console.log(number_slide);
+
+  
+      })
 
