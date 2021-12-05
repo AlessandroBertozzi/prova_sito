@@ -5,74 +5,112 @@
 function open_menu() {
   if (document.getElementById("blocks-navbar").style.display === "none" || document.getElementById("blocks-navbar").style.display === "") {
       document.getElementById("blocks-navbar").style.display = "flex";
-      document.getElementById("Navbar").style.color = "black";
+      document.getElementById("Navbar").style.backgroundColor = "white";
+      document.getElementById("Navbar").style.color = "#c8d300";
+      document.getElementById("close_menu").style.visibility = "visible";
+      document.getElementById("open_menu").style.visibility = "hidden";
     }
 
     else {
       document.getElementById("blocks-navbar").style.display = "none";
+      document.getElementById("Navbar").style.color = "white";
+      document.getElementById("close_menu").style.visibility = "hidden";
+      document.getElementById("open_menu").style.visibility = "visible";
   }}
 
 
 
-  $("#close_menu").click(function(){
+  $("#menu").click(function(){
     open_menu();
     
   })
 
 
-  number_slide = 1;
-  $(".arrow" ).click(function() {
-    console.log(number_slide);
+  $("#Navbar").on("mouseover", function () {
+    document.getElementById("logo").src = "Logo_300x120px_verde.png";
+    document.getElementById("Navbar").style.backgroundColor = "white";
+    document.getElementById("Navbar").style.color = "#c8d300";
+});
 
-    if (number_slide < 3) {
-      number_slide = number_slide + 1;
-    $("#background-image-" + number_slide)[0].scrollIntoView({
-      behavior: "smooth", // or "auto" or "instant"
-      block: "start" // or "end"
+$("#Navbar").on("mouseout", function () {
+  if (document.getElementById("blocks-navbar").style.display !== "flex") {
+    document.getElementById("logo").src = "Logo_300x120px_bianco.png";
+    document.getElementById("Navbar").style.backgroundColor = "transparent";
+    document.getElementById("Navbar").style.color = "white";
+  }
+
+
+});
+
+
+
+
+
+
+
+
+//////-----------Background slides-----------//////
+
+function switchBackground (number_slide) {
+  $("#background-image-" + number_slide)[0].scrollIntoView({
+    behavior: "smooth", // or "auto" or "instant"
+    block: "start" // or "end"
   });
 }
-  else if (number_slide == 3) {
-    number_slide = 1;
 
-    $("#background-image-" + number_slide)[0].scrollIntoView({
-      behavior: "smooth", // or "auto" or "instant"
-      block: "start" // or "end"
+
+function poisitionFunction () {
+  var h = window.innerHeight;
+  var intElemScrollTop = document.getElementById('main').scrollTop;
+  var intvalue = Math.round( intElemScrollTop );
+
+
+  var position = (intvalue + h) / h;
+  number_slide = Math.round(position + 1);
+
+
+  console.log(intvalue);
+
+
+
+
+  return number_slide;
+
+
+
+}
+
+
+function Motion() {
+  number_slide = poisitionFunction();
+
+    if (number_slide == 4) {
+      number_slide = 1
+    };
+
+  switchBackground(number_slide);
+  
+};
+
+
+  $("#icon").click(function() {
+    Motion();
+
     })
-  }
-  });
+
+
 
 
 
 
     
-    
-    $('#main').on('wheel', function() {
-      var h = window.innerHeight;
-      var intElemScrollTop = document.getElementById('main').scrollTop;
-      var intvalue = Math.round( intElemScrollTop );
 
-      var ciao = intvalue / h;
 
-      number_slide = Math.round(ciao + 1);
-      
-      console.log(number_slide);
 
-  
-      })
 
-      $('#main').on('ontouchmove', function() {
-        var h = window.innerHeight;
-        var intElemScrollTop = document.getElementById('main').scrollTop;
-        var intvalue = Math.round( intElemScrollTop );
-  
-        var ciao = intvalue / h;
-  
-        number_slide = Math.round(ciao + 1);
+
+
+
+
+
         
-        console.log(number_slide);
-  
-    
-        })
-
-
-
