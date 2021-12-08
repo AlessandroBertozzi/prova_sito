@@ -8,14 +8,14 @@ function open_menu() {
       document.getElementById("Navbar").style.backgroundColor = "white";
       document.getElementById("Navbar").style.color = "#c8d300";
       document.getElementById("close_menu").style.visibility = "visible";
-
+      document.getElementById("open_menu").style.visibility = "hidden";
     }
 
     else {
       document.getElementById("blocks-navbar").style.display = "none";
       document.getElementById("Navbar").style.color = "white";
       document.getElementById("close_menu").style.visibility = "hidden";
-
+      document.getElementById("open_menu").style.visibility = "visible";
   }}
 
 
